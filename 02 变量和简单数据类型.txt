@@ -1,0 +1,46 @@
+一、字符串
+- 变量尽量使用小写与下划线
+字符串大小写
+-name.title() : 变量name中的字符串中的每个单词的首写字母变大写
+-name.upper() : 变量name中的字符串中每个字符都变大写
+-name.lower() : 变量name中的字符串中每个字符都变小写
+
+字符串拼接
+-+ 号进行拼接
+-\n 换行
+-\t 添加制表符
+
+删除空白
+-删除尾部空白
+name.rstrip() : 删除字符串中 的结尾多余的空白
+这种删除是暂时的，下次访问name时它的首位还是会存在多余的空白
+要永久的删除name中的首尾空白需要将name存回去一个变量中
+name = name.rstrip()
+-删除头部空白
+name.lstrip()
+-同时删除头部与尾部的空白
+name.strip()
+
+字符串使用中常见的语法错误
+-撇号的使用
+在用单引号括起的字符串中，如果包含撇号，就将导致错误。这是因为这回导致python将第一个单引号和撇号之间的内容视为一个字符串，进而将余下的文本视为Python代码
+name = “li'li”——一个撇号位于双引号之间会正确显示
+name = ‘li'li’——这样会提示错误
+
+python2 与 python3 的print语句的区别：
+python2 --print "hello" ——不用放在括号里面
+python3 --print ("hello") ——需要放在括号里面，在python3中print就是一个函数
+
+二、数字
+-可对整数进行+ - * /
+-3**2是3的二次方的意思
+-可使用括号改变运行次序
+-使用函数str() 避免类型错误
+message = “Happy ” + age + “rd Birthday！”——这是错误的，因为python发现age是一个int型，但它不知道如何解读这个值
+message = “Happy ” + str(age) + “rd Birthday！”—— str()就是明确的给python显示到将age显示为string型
+-除法在python2与python3的区别
+python2 ： 3/2 = 1（只表示整数部分）
+python3 ： 3/2 = 1.5（也表示小数部分）
+（python2 ： 3.0/2 = 1.5结果也会是浮点型）
+
+-# 号表示注释
